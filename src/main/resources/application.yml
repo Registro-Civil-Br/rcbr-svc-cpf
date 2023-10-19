@@ -6,5 +6,5 @@ spring:
   cloud:
     config:
       profile: ${ACTIVE_PROFILE:default}
-server:
-  port: 8081
+#server:
+#  port: 8081
