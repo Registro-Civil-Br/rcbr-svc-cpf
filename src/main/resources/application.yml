@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: SVC-CPF
+  config:
+    import: configserver:${URL_CONFIG_SERVER:http://localhost:6060}
+  cloud:
+    config:
+      profile: ${ACTIVE_PROFILE:default}
+server:
+  port: 8081
