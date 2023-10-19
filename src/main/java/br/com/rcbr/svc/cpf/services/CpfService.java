@@ -30,7 +30,7 @@ public class CpfService {
 
         log.info("Iniciando instância de objeto para retorno do tipo CpfResponse...");
         CpfResponse cpfResponse = new CpfResponse(cpf);
-        log.info("Objeto construído com sucesso: {}", cpfResponse.toString());
+        log.info("Objeto construído com sucesso: {}", cpfResponse);
 
         log.info("Retornando valores...");
         return cpfResponse;
@@ -101,7 +101,7 @@ public class CpfService {
         log.info("Método de cálculo do segundo dígito verificador do CPF acessado");
 
         log.info("Convertendo digitos aleatórios gerados para string e removendo seu primeiro dígito...");
-        String digitosAleatoriosSemOPrimeiroDigito = String.valueOf(digitosAleatorios).substring(1, 9);
+        String digitosAleatoriosSemOPrimeiroDigito = String.valueOf(digitosAleatorios).substring(1, 8);
 
         log.info("Convertendo primeiro dígito verificador para string...");
         String primeiroDigitoVerificadorString = String.valueOf(primeiroDigitoVerificador);
