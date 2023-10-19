@@ -1,23 +1,10 @@
 spring:
   application:
     name: SVC-CPF
-
+  config:
+    import: configserver:${URL_CONFIG_SERVER:http://localhost:6060}
+  cloud:
+    config:
+      profile: ${ACTIVE_PROFILE:default}
 server:
   port: 8081
-
-# Configurações Actuator
-management:
-  endpoints:
-    web:
-      base-path: /actuator
-  health:
-    binders:
-      enabled:
-        false
-
-# Configurações Eureka
-eureka:
-  client:
-    fetch-register: true
-    register-with-eureka: true
-    defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
